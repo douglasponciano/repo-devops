@@ -1,0 +1,97 @@
+LINUX A BÍBLIA 
+ls -l
+ls -la
+ls -ld
+chmod 777 file
+chmod 755
+chmod 644
+chmod -R 755 $HOME/myapps -> permissão recursiva 
+chmod a-w file
+chmod u+rw files
+chmod -R o-w $HOME/myapps
+chown joe /home/joe/memo.txt -> mudar posse do arquivo 
+chown joe:joe /home/joe/memo.txt -> mudar posse e grupo 
+chown -R joe:joe /media/myusb -> permissão recursiva
+umask 
+--------------------------------
+CAP 5 - Trabalhando com arquivos de texto
+vim  -Aperte ESC 
+a — O comando add. Com esse comando, é possível inserir um texto que começa à direita do cursor.
+A — Adiciona ao final do comando. Com esse comando, é possível inserir texto a partir do fim da
+linha atual.
+i — O comando insert. Com esse comando, é possível inserir texto que começa à esquerda do
+cursor.
+I — O comando insert at beginning. Com esse comando, é possível inserir texto que começa no
+início da linha atual.
+o — O comando open below. Esse comando abre uma linha abaixo da linha atual e coloca você no
+modo de inserção.
+O — O comando open above. Esse comando abre uma linha acima da linha atual e coloca você no
+modo de inserção.
+
+x — Exclui o caractere sob o cursor.
+X — Exclui o caractere imediatamente antes do cursor.
+d <?> — Exclui algum texto.
+c <?> — Altera algum texto.
+y <?> — Copia (yanks) algum texto.
+
+ZZ — Salva as mudanças atuais no arquivo e sai do vi.
+:w — Salve o arquivo atual, mas continua no modo de edição.
+:wq — O mesmo que ZZ.
+:q — Sai do arquivo atual. Isso só funciona se você não tiver nenhuma alteração não salva.
+:q! — Sai do arquivo atual e não salva as alterações feitas no arquivo.
+digite u para desfazer
+
+/hello — Pesquisa para frente a palavra hello.
+?goodbye — Pesquisa para trás a palavra goodbye
+
+:g/Local — Pesquisa a palavra Local e imprime todas as ocorrências dessa linha no arquivo.
+(Se houver mais de uma tela de resultados, a saída é redirecionada para o comando more.)
+:s/Local/Remote — Substitui Remote pela palavra Local na linha atual.
+:g/Local/s//Remote — Substitui a primeira ocorrência da palavra Local em cada linha do
+arquivo pela palavra Remote.
+:g/Local/s//Remote/g — Substitui todas as ocorrências da palavra Local pela palavra
+Remote em todo o arquivo.
+:g/Local/s//Remote/gp — Substitui todas as ocorrências da palavra Local pela palavra
+Remote em todo o arquivo e depois imprime cada linha de modo que você possa ver as
+mudanças (redirecionando-as através de less se a saída ocupar mais de uma página).
+
+Localizando arquivos
+locate - para encontrar comandos pelo nome
+find  - para encontrar arquivos com base em vários atributos diferentes
+grep - para pesquisar arquivos de texto a fim de encontrar linhas que contêm o texto de pesquisa
+
+locate -i, ->  nomes de arquivos são encontrados, independentemente do uso de maiúsculas ou
+minúsculas
+
+$ find
+$ find /etc
+# find /etc
+$ find $HOME -ls
+find /etc -name passwd
+find /etc -iname ‘*passwd*’
+
+$ find /usr/share/ -size +10M
+$ find /mostlybig -size -1M
+$ find /bigdata -size +500M -size -5G -exec du -sh {} \;
+find /home -user chris -ls
+find /var/spool -not -user root -ls
+find /bin -perm 755 -ls
+find /home/douglas/ -perm -222 -type d -ls
+
+find /etc -maxdepth 3 -name *.conf
+find . -admin -2
+
+grep http services (buscar http dentro do arquivo services
+grep -i http services ( buscar maisculuas e minusculas) 
+grep -l douglas * ( buscar em todos os arquivos)
+cat american-english | grep -E  "^computer" (usando expressao regular no shell) 
+egrep "^.oot" american-english
+
+more services
+less services
+
+tail /etc/passwd
+head /etc/passwd
+
+tail -n3
+head -n3 
