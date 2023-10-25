@@ -9,6 +9,12 @@ chmod 400 silvadgp-labs -> mudar permissao chave privada
 
 ssh -i silvadgp-labs silvadgp@34.95.241.138 -> acesar maquina com a nova chave
 #================================================#
+Gerar as chaves SSH
+Enviar as chaves para a instância
+Criar um bucket no Google Cloud Storage
+Instalar e configurar o Google Cloud SDK
+Copiar os diretórios e arquivos do site para dentro do storage
+
 instalar gc-sdk
 gcloud init
 gsutil ls
