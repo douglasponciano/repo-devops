@@ -1,3 +1,4 @@
+#=================================================#
 ***acesso externo vm GPC ***
 
 ssh-keygen -t rsa -f silvadgp-labs -C silvadgp - criar chave com o nome silvadgp-labs para o usuario silvadgp
@@ -7,6 +8,5 @@ cat silvadgp-labs.pub -> acrescentar chave no gpc
 chmod 400 silvadgp-labs -> mudar permissao chave privada 
 
 ssh -i silvadgp-labs silvadgp@34.95.241.138 -> acesar maquina com a nova chave
-
--------------------
+#================================================#
 instalar gc-sdk
