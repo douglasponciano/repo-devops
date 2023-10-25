@@ -10,3 +10,5 @@ chmod 400 silvadgp-labs -> mudar permissao chave privada
 ssh -i silvadgp-labs silvadgp@34.95.241.138 -> acesar maquina com a nova chave
 #================================================#
 instalar gc-sdk
+gcloud init
+gsutil ls
