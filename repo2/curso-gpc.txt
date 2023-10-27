@@ -19,4 +19,4 @@ instalar gc-sdk
 gcloud init
 gsutil ls
 
-não estudei hoje
+lembrando os comandos do Merge
