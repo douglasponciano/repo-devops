@@ -18,3 +18,5 @@ Copiar os diretórios e arquivos do site para dentro do storage
 instalar gc-sdk
 gcloud init
 gsutil ls
+
+não estudei hoje
