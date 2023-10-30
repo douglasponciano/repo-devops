@@ -19,4 +19,4 @@ instalar gc-sdk
 gcloud init
 gsutil ls
 
-não estudei hoje
+gsutil acl -r ch -u Allusers:R gs://ponciano-labs/imagens -> Permissao na pasta de imagens
